@@ -10,12 +10,8 @@ const nftMarketAddress = process.env.NFT_MARKET_ADDRESS || ""; // NFT market con
 const tokenAddress = process.env.TOKEN_ADDRESS || ""; // ERC20 token address
 
 // Contract ABIs
-const nftMarketABI = [
-    "function buyNFT(uint256 listingId) external",
-];
-const tokenABI = [
-    "function approve(address spender, uint256 amount) public returns (bool)",
-];
+const nftMarketABI = ["function buyNFT(uint256 listingId) external"];
+const tokenABI = ["function approve(address spender, uint256 amount) public returns (bool)"];
 
 // Create contract instances
 const nftMarketContract = new ethers.Contract(nftMarketAddress, nftMarketABI, wallet);
